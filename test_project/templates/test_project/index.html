@@ -1,0 +1,9 @@
+{% if latest_cromos_list %}
+    <ul>
+    {% for cromo in latest_cromos_list %}
+        <li><a href="{%url 'test_project:detail' cromo.id%}">{{ cromo.cromo_img }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
